@@ -1,0 +1,15 @@
+/.env
+/.env.*
+!/.env.example
+/vendor
+/node_modules
+/storage/logs/*.log
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/.phpunit.cache
+/public/build
+npm-debug.log
+yarn-error.log
+/database/*.sqlite
+/storage/*.key
