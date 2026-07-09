@@ -13,3 +13,4 @@ npm-debug.log
 yarn-error.log
 /database/*.sqlite
 /storage/*.key
+/.phpunit.result.cache

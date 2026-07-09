@@ -12,7 +12,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        // Permite testar os endpoints do laboratorio via Postman/curl sem token CSRF.
+        // Quando a tela Blade estiver pronta, podemos enviar o token no Ajax.
+        $middleware->validateCsrfTokens(except: [
+            'balances/*',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->shouldRenderJsonWhen(
